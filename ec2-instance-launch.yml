@@ -1,0 +1,11 @@
+- name: Lauching aws ec2 instace
+  hosts: localhost
+  tasks:
+  - name: Launching ec2 instance with ec2 module
+    ec2:
+#        aws_access_key: 
+#        aws_secret_key: 
+        instance_type: t2.micro
+        image: ami-5b673c34
+        key_name: aws-key-6april19
+        region: ap-south-1
