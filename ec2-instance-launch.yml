@@ -3,9 +3,9 @@
   tasks:
   - name: Launching ec2 instance with ec2 module
     ec2:
-#        aws_access_key: 
-#        aws_secret_key: 
+        aws_access_key: #give your aws_access_key here
+        aws_secret_key: #give your aws_secret_key here 
         instance_type: t2.micro
         image: ami-5b673c34
-        key_name: aws-key-6april19
+        key_name: # give your aws ec2-instance key name if you had previously created key for aws ec2-instances 
         region: ap-south-1
