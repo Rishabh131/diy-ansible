@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # To make this playbook work you must have boto and python install in your system 
 # To insatall boto :
 # 1) first install python3 via "yum install python3"
@@ -46,4 +46,3 @@
         image: ami-5b673c34
         key_name: # give your aws ec2-instance key name if you had previously created key for aws ec2-instances 
         region: ap-south-1
->>>>>>> 71c8a5cab6c0e36e877e60f9a1b8051a920f7991
