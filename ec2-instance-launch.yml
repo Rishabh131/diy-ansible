@@ -34,15 +34,3 @@
         image: "{{ image }}" # example for image name "ami-5b673c34" for redhat 
         key_name: "{{ key_name }}" # enter your ec2 instance key name which u generally use to ssh to ec2
         region: "{{ region_name }}" # example for region name is " ap-south-1 "
-=======
-- name: Lauching aws ec2 instace
-  hosts: localhost
-  tasks:
-  - name: Launching ec2 instance with ec2 module
-    ec2:
-        aws_access_key: #give your aws_access_key here
-        aws_secret_key: #give your aws_secret_key here 
-        instance_type: t2.micro
-        image: ami-5b673c34
-        key_name: # give your aws ec2-instance key name if you had previously created key for aws ec2-instances 
-        region: ap-south-1
