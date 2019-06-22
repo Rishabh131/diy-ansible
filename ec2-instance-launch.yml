@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+# To make this playbook work you must have boto and python install in your system 
+# To insatall boto :
+# 1) first install python3 via "yum install python3"
+# 2) install python pip via " yum install python-pip"
+# 3) install boto "pip install boto"
+
+# then launch this playbook via 
+# "ansible-playbook playbook_name " 
+# and give the variable details that cli ask 
+
+- name: Lauching aws ec2 instace
+  hosts: localhost
+  vars_prompt:
+        - name: x
+          prompt: "enter the var file location"
+        - name: instance_type
+          prompt: "enter the instance type you want to lauch example for instance type 't2.micro'"
+        - name: image
+          prompt: "enter the image or ami name that u want to lauch on your ec2-instance example for image name 'ami-5b673c34' for redhat"
+        - name: key_name
+          prompt: "enter your ec2 instance key name which u generally use to ssh to ec2"
+        - name: region_name
+          prompt: "enter the region where you want to lauch your instance example for region name is ' ap-south-1' "
+
+
+  tasks:
+  - include_vars: "{{ x }}"
+  - name: Launching ec2 instance with ec2 module
+    ec2:
+        aws_access_key: "{{ ak }}"
+        aws_secret_key: "{{ sk }}"
+        instance_type: "{{ instance_type }}" #example for instance type "t2.micro"
+        image: "{{ image }}" # example for image name "ami-5b673c34" for redhat 
+        key_name: "{{ key_name }}" # enter your ec2 instance key name which u generally use to ssh to ec2
+        region: "{{ region_name }}" # example for region name is " ap-south-1 "
+=======
 - name: Lauching aws ec2 instace
   hosts: localhost
   tasks:
@@ -9,3 +46,4 @@
         image: ami-5b673c34
         key_name: # give your aws ec2-instance key name if you had previously created key for aws ec2-instances 
         region: ap-south-1
+>>>>>>> 71c8a5cab6c0e36e877e60f9a1b8051a920f7991
