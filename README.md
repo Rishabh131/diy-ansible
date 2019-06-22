@@ -1,13 +1,9 @@
-TO make this ansible playbook work You have to put the correct details of 
+ To make this playbook work you must have boto and python install in your system 
+ To insatall boto :
+ 1) first install python3 via "yum install python3"
+ 2) install python pip via " yum install python-pip"
+ 3) install boto "pip install boto"
 
-aws_access_key:
- 
-aws_secret_key: 
-
-key_name:
-
-This playbook will help you to launch an rhel7 instance on t2.micro type instance(1GB RAM , 30GB SSD, 1 CPU)
-
-To change the config of your instance edit the respective details
-
-
+ then launch this playbook via 
+ "ansible-playbook 'playbook_name' " 
+ and give the variable details that cli ask 
